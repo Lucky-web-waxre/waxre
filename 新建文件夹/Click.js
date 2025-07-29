@@ -13,7 +13,7 @@ function login(){
 	var password = document.getElementById("login-password").value;
 	
 	if(user.get(username)==password){
-		window.location.href="./待开放.html";
+		window.location.href="https://github.com/Lucky-web-waxre/waxre/blob/main/%E5%BE%85%E5%BC%80%E6%94%BE.html";
 	}else{
 		alert("用户名或密码错误");
 	}
