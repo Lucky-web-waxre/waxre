@@ -1,0 +1,71 @@
+<!--
+ * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @Date: 2025-07-31 01:49:09
+ * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @LastEditTime: 2025-07-31 03:38:57
+ * @FilePath: \lucky\login.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>登录到Lucky</title>
+	<link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://css.huangwx.cn/css/sweetalert.css">
+	<script type="text/javascript" src="http://css.huangwx.cn/js/sweetalert-dev.js"></script>
+	<style>
+		.center {
+			display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+}
+	</style>
+</head>
+
+<body>
+	<iframe src="./music/bg.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+<audio autoplay loop>
+    <source src="./music/bg.mp3" type="audio/mp3">
+</audio>
+	<div class="box">
+		<form autocomplete="off" onsubmit="checkLogin(event)">
+			<h2>请登录</h2>
+			<div class="inputBox">
+				<input type="email" required="required" id="email">
+				<span>邮箱地址</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required" id="password">
+				<span>密码</span>
+				<i></i>
+			</div>
+			<br><br>
+			<div style="text-align:center;vertical-align:middle;">
+			<input type="submit" value="立即登录">
+			</div>
+		</form>
+	</div>
+</body>
+<script>
+	function checkLogin(event){
+		event.preventDefault()
+		var email = document.getElementById('email').value;
+		var password = document.getElementById('password').value;
+
+		if(email !== 'waxre060914@hotmail.com'){
+			swal("此邮箱未注册，请联系管理员注册！")
+			return
+		}else if(password !== 'tzj167690'){
+			swal("密码错误，请重试！")
+			return
+		}else{
+				window.location.href = './首页.html'
+		}
+	}
+	</script>
+</html>
